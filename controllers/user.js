@@ -1,36 +1,31 @@
 import response from "express";
 
-
-
 const userGet = (req, res) => {
-
   const query = req.query;
 
   res.json({
     msg: "get API - controller",
-    query
+    query,
   });
 };
 
 const userPost = (req, res) => {
-  
   //const body = req.body; SE PUEDE HACER MEJOR DESESTRUCTURANDO EL OBJETO body
-  const { name, age} = req.body;
+  const { name, age } = req.body;
 
   res.json({
     msg: "post API - controller",
     name,
-    age
+    age,
   });
 };
 
 const userPut = (req, res) => {
-    
-  const id = req.params.id;
+  const { id } = req.params;
 
   res.json({
     msg: "put API - controller",
-    id
+    id,
   });
 };
 
